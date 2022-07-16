@@ -1,4 +1,5 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from shareRes.models import *
@@ -45,3 +46,10 @@ def sendEmail(request):
 
 
 
+=======
+from django.http import HttpResponse
+
+# Create your views here.
+def sendEmail(request):
+    return HttpResponse("sendEmail")
+>>>>>>> 8a891e9ea57bc633711624dab3df171cb5eb37ac

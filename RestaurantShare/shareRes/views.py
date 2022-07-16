@@ -1,4 +1,5 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import *
@@ -14,10 +15,21 @@ def index(request):
 def restaurantDetail(request,res_id):
     restaurant = Restaurant.objects.get(id = res_id)
     content = {'restaurant': restaurant}
+=======
+from django.http import HttpResponse
+
+# Create your views here.
+def index(request):
+    # return HttpResponse("index")
+    return render(request, 'shareRes/index.html')
+
+def restaurantDetail(request):
+>>>>>>> 8a891e9ea57bc633711624dab3df171cb5eb37ac
     # return HttpResponse("restaurantDetail")
     return render(request, 'shareRes/restaurantDetail.html')
 
 def restaurantCreate(request):
+<<<<<<< HEAD
     categories = Category.objects.all()
     content = {'categories': categories}
     # return HttpResponse("restaurantCreate")
@@ -82,3 +94,11 @@ def Delete_category(request):
     delete_category = Category.objects.get(id = category_id)
     delete_category.delete()
     return HttpResponseRedirect(reverse('cateCreatePage'))
+=======
+    # return HttpResponse("restaurantCreate")
+    return render(request, 'shareRes/restaurantCreate.html')
+
+def categoryCreate(request):
+    # return HttpResponse("categoryCreate")
+    return render(request, 'shareRes/categoryCreate.html')
+>>>>>>> 8a891e9ea57bc633711624dab3df171cb5eb37ac
